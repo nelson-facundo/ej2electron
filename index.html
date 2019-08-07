@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+  <meta charset="UTF-8"/>
   <title>Ejemplo de Auto-Actualización</title>
   <style>
     body {
@@ -26,7 +27,7 @@
   </style>
 </head>
 <body>
-  <h1>Electron Auto-Actualización</h1>
+  <h1>Electron Auto-Actualizable</h1>
   <p>Hola mundo actualizado version 2</p>
   <p id="version"></p>
   <div id="notification" class="hidden">
@@ -53,13 +54,13 @@
 
     ipcRenderer.on('update_available', () => {
       ipcRenderer.removeAllListeners('update_available');
-      message.innerText = 'Una nueva actualización está disponible. Descargar ahora...';
+      message.innerText = 'Hay nuevas actualizaciones disponibles. Favor esperar, descargando...';
       notification.classList.remove('hidden');
     });
 
     ipcRenderer.on('update_downloaded', () => {
       ipcRenderer.removeAllListeners('update_downloaded');
-      message.innerText = 'Actualización descargada. Las actualizaciones serám instaladas. ¿Quieres reiniciar ahora?';
+      message.innerText = 'Actualización descargada. Las actualizaciones están instaladas. ¿Quieres reiniciar ahora?';
       restartButton.classList.remove('hidden');
       notification.classList.remove('hidden');
     });
