@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Electron Auto Update Example</title>
+  <title>Ejemplo de Auto-Actualización</title>
   <style>
     body {
       box-sizing: border-box;
@@ -26,15 +26,15 @@
   </style>
 </head>
 <body>
-  <h1>Electron Auto Update Example</h1>
+  <h1>Electron ejemplo de Auto-Actualización</h1>
   <p id="version"></p>
   <div id="notification" class="hidden">
     <p id="message"></p>
     <button id="close-button" onClick="closeNotification()">
-      Close
+      Cerrar
     </button>
     <button id="restart-button" onClick="restartApp()" class="hidden">
-      Restart
+      Reiniciar
     </button>
   </div>
   <script>
@@ -52,13 +52,13 @@
 
     ipcRenderer.on('update_available', () => {
       ipcRenderer.removeAllListeners('update_available');
-      message.innerText = 'A new update is available. Downloading now...';
+      message.innerText = 'Una nueva actualización está disponible. Descargar ahora...';
       notification.classList.remove('hidden');
     });
 
     ipcRenderer.on('update_downloaded', () => {
       ipcRenderer.removeAllListeners('update_downloaded');
-      message.innerText = 'Update Downloaded. It will be installed on restart. Restart now?';
+      message.innerText = 'Actualización descargada. Las actualizaciones serám instaladas. ¿Quieres reiniciar ahora?';
       restartButton.classList.remove('hidden');
       notification.classList.remove('hidden');
     });
