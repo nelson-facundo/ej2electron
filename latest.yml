@@ -1,4 +1,4 @@
-version: 1.0.2
+version: 1.0.4
 files:
   - url: electron-auto-update-example-Setup-1.0.1.exe
     sha512: Uf9zEXTgZ6Bze1IXLaiZknXoMYMW/OXbAND5T3so05Dostt7dHARTSHs4JrkM/gY5xmypvpEsIZvpm5wnUpfOw==
