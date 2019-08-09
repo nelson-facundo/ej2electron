@@ -1,5 +1,4 @@
 electron-builder.yml
 node_modules
 dist
-electron-auto-update-example-1.0.1
 latest.yml
